@@ -1,0 +1,14 @@
+{
+  "name": "email",
+  "routeExposure": "/email",
+  "activate": true,
+  "mailConfig": [{
+    "emailModel": "adminEmail",
+    "emailLabel": "Send Info",
+    "label": "Send Mail To Users",
+    "from": "'BrandZoomr' <info@brandzoomr.com>",
+    "assosiatedUsers": ["Customer", "Employee", "BrandManager"],
+    "templates": {}
+  }],
+  "pluginDependencies": {}
+}
