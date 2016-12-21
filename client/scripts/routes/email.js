@@ -17,7 +17,7 @@ angular.module($snaphy.getModuleName())
             databasesList.forEach(function(stateObj) {
                 //Add states at run time..
                 runtimeStates.addState(emailModel.model + "__" + stateObj,  {
-                    url: '/:emailModel/'  +  stateObj.toLowerCase().trim(),
+                    url: '/' + emailModel.model + '/'  +  stateObj.toLowerCase().trim(),
                     templateUrl: '/email/views/email.html',
                     controller: 'emailControl',
 
