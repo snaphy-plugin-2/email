@@ -20,12 +20,12 @@ angular.module($snaphy.getModuleName())
             //Now get the customerModel name and email model name..
             var stateData = stateName.split("__");
             if(stateData.length !== 2){
-                SnaphyTemplate.notify({
+                /*SnaphyTemplate.notify({
                     message: "Invalid Url.",
                     type: 'danger',
                     icon: 'fa fa-check',
                     align: 'right'
-                });
+                });*/
                 return false;
             }
 
