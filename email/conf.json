@@ -6,9 +6,10 @@
     "emailModel": "adminEmail",
     "emailLabel": "Send Info",
     "label": "Send Mail To Users",
-    "from": "'BrandZoomr' <info@brandzoomr.com>",
-    "assosiatedUsers": ["Customer", "Employee", "BrandManager"],
-    "templates": {}
+    "from": "'Test User' <test@snaphy.com>",
+    "assosiatedUsers": ["Customer", "Employee"],
+    "templates": {
+    }
   }],
   "pluginDependencies": {}
 }
