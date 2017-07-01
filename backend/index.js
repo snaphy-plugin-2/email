@@ -47,7 +47,14 @@ module.exports = function(server, databaseObj, helper, packageObj) {
 	};
 
 
-    var addSendRemoteMethod = function(mailModel, from){
+
+
+    /**
+     * addSendRemoteMethod
+     * @param mailModel
+     * @param from
+     */
+    const addSendRemoteMethod = function(mailModel, from){
         mailModel.sendMail = function( to, subject, html, callback){
             mailModel.send({
                 from : from,
@@ -137,10 +144,10 @@ module.exports = function(server, databaseObj, helper, packageObj) {
                 addSendRemoteMethod(emailModelInstance, mailConfig.from);
 
                 //Now iterate each template method..
-                for (var templateName in templatesObj) {
+                for (const templateName in templatesObj) {
                     if (templatesObj.hasOwnProperty(templateName)) {
-                        var pluginRootPath = helper.getPluginRootDir(packageObj.name);
-                        var templatePath = pluginRootPath + '/' + templatesObj[templateName].templatePath;
+                        const pluginRootPath = helper.getPluginRootDir(packageObj.name);
+                        const templatePath = pluginRootPath + '/' + templatesObj[templateName].templatePath;
                         //Now iterate and add templateName methods to the object..
                         methodObj[templateName] = (function(templateName, templatePath) {
                             //Now return the function..
