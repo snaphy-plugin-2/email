@@ -2,7 +2,7 @@
     <li class="nav-main-heading"><span class="sidebar-mini-hide">Email Management</span></li>
     <li ng-repeat="emailModelObj in emailModelList">
         <a snaphy-load-nav class="nav-submenu"  style="cursor:pointer;"><i class="fa fa-send"></i>
-            <span class="sidebar-mini-hide">{{emailModelObj.label}}</span>
+            <span ng-bind="emailModelObj.label" class="sidebar-mini-hide"></span>
         </a>
         <ul>
             <li ng-repeat="userModel in emailModelObj.assosiatedUsers">
